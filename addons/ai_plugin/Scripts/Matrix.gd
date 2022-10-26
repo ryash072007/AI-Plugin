@@ -110,6 +110,15 @@ static func map(matrix: Matrix, callback: Callable) -> Matrix:
 
 	return result
 
+static func mutate_map(matrix: Matrix, callback: Callable, mutation_chance: float, mutation_range: Vector2) -> Matrix:
+	var result = Matrix.new(matrix.rows, matrix.cols)
+	
+	for row in range(result.rows):
+		for col in range(result.cols):
+			result.data[row][col] = callback.call(matrix.data[row][col], row, col, mutation_chance, mutation_range)
+
+	return result
+
 static func random(a: Matrix, b: Matrix) -> Matrix:
 	var result = Matrix.new(a.rows, a.cols)
 	for row in range(result.rows):
