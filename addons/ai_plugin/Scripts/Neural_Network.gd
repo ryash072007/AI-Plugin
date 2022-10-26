@@ -48,7 +48,7 @@ func set_color(_color: Color):
 	color = _color
 
 func set_random_color():
-	if color is Color.TRANSPARENT:
+	if color == Color.TRANSPARENT:
 		color = Color(randi_range(0, 1), randi_range(0, 1), randi_range(0, 1))
 
 func set_learning_rate(_learning_rate: float = 0.1) -> void:

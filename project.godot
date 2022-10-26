@@ -33,6 +33,7 @@ _global_script_class_icons={
 [application]
 
 config/name="AI Plugin"
+run/main_scene="res://trial.tscn"
 config/features=PackedStringArray("4.0")
 config/icon="res://icon.svg"
 
